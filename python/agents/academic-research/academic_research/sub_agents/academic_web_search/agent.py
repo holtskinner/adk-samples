@@ -12,6 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Academic_websearch_agent for finding research papers using search tools."""
+"""Academic_web_search_agent for finding research papers using search tools."""
 
-from .agent import academic_websearch_agent
+from google.adk import Agent
+from google.adk.tools import google_search
+
+from . import prompt
+
+MODEL = "gemini-2.5-pro"
+
+
+academic_web_search_agent = Agent(
+    model=MODEL,
+    name="academic_web_search_agent",
+    instruction=prompt.ACADEMIC_WEB_SEARCH_PROMPT,
+    output_key="recent_citing_papers",
+    tools=[google_search],
+)

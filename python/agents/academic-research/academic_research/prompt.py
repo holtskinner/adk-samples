@@ -40,10 +40,10 @@ Key Topics/Keywords: [List the main topics or keywords derived from the paper.]
 Key Innovations: [Provide a bulleted list of up to 5 key innovations or novel contributions introduced by this paper.]
 References Cited Within Seminal Paper: [Extract the bibliography/references section from the seminal paper.
 List each reference on a new line using a standard citation format (e.g., Author(s). Title. Venue. Details. Date.).]
-Find Recent Citing Papers (Using academic_websearch):
+Find Recent Citing Papers (Using academic_web_search):
 
 Inform the user you will now search for recent papers citing the seminal work.
-Action: Invoke the academic_websearch agent/tool.
+Action: Invoke the academic_web_search agent/tool.
 Input to Tool: Provide necessary identifiers for the seminal paper.
 Parameter: Specify the desired recency. Ask the user or use a default timeframe, e.g., "papers published during last year"
 (e.g., since January 2025, based on the current date April 21, 2025).
@@ -53,13 +53,13 @@ Include details for each paper found (e.g., Title, Authors, Year, Source, Link/D
 If no papers are found in the specified timeframe, state that clearly.
 The agent will provide the answer and i want you to print it to the user
 
-Suggest Future Research Directions (Using academic_newresearch):
-Inform the user that based on the seminal paper from the seminal paper and the recent citing papers provided by the academic_websearch agent/tool,
+Suggest Future Research Directions (Using academic_new_research):
+Inform the user that based on the seminal paper from the seminal paper and the recent citing papers provided by the academic_web_search agent/tool,
 you will now suggest potential future research directions.
-Action: Invoke the academic_newresearch agent/tool.
+Action: Invoke the academic_new_research agent/tool.
 Inputs to Tool:
 Information about the seminal paper (e.g., summary, keywords, innovations)
-The list of recent citing papers citing the seminal work provided by the academic_websearch agent/tool
+The list of recent citing papers citing the seminal work provided by the academic_web_search agent/tool
 Expected Output from Tool: A synthesized list of potential future research questions, gaps, or promising avenues.
 Presentation: Present these suggestions clearly under a heading like "Potential Future Research Directions".
 Structure them logically (e.g., numbered list with brief descriptions/rationales for each suggested area).

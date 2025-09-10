@@ -1,6 +1,5 @@
 # Academic Research
 
-
 ## Overview
 
 AI-driven agent designed to facilitate the exploration of the academic landscape surrounding seminal research works. Recognizing the challenge researchers face in navigating the expanding body of literature influenced by foundational studies, this agent offers a streamlined approach. By accepting a seminal paper identified provided as file input, the agent first analyzes the core contributions of the specified work.
@@ -22,12 +21,11 @@ The key features of the Academic Research include:
 | **Components**  | Tools: built-in Google Search |
 | **Vertical**  | Education |
 
-
-
-### Agent architecture:
+### Agent architecture
 
 This diagram shows the detailed architecture of the agents and tools used
 to implement this workflow.
+
 <img src="academic-research.svg" alt="academic researcher" width="800"/>
 
 ## Setup and Installation
@@ -105,14 +103,14 @@ You may open the URL, select "academic_research" in the top-left drop-down menu,
 a chatbot interface will appear on the right. The conversation is initially
 blank. Here are some example requests you may ask the Academic Research to verify:
 
-```
+```none
 who are you
 ```
 
-Sampled responses of these requrests are shown below in the [Example
+Sampled responses of these requests are shown below in the [Example
 Interaction](#example-interaction) section.
 
-```
+```none
 Hello! I am an AI Research Assistant.
 
 My purpose is to help you explore the academic landscape related to a seminal paper you're interested in. I can:
@@ -128,7 +126,7 @@ How can I help you today? Would you like to provide a seminal paper for analysis
 Below is an example interaction with the Academic Research. Note that the exact output
 of the agent may be different every time. Not that the user provides a pdf with the seminal paper to analyze
 
-```
+```none
  * user: who are you
 
 Hello! I am an AI Research Assistant.
@@ -358,7 +356,6 @@ is functional. `eval` is a demonstration of how to evaluate the agent, using the
 `AgentEvaluator` in ADK. It sends a couple requests to the agent and expects
 that the agent's responses match a pre-defined response reasonablly well.
 
-
 ## Deployment
 
 The Academic Co-Research can be deployed to Vertex AI Agent Engine using the following
@@ -371,7 +368,7 @@ python3 deployment/deploy.py --create
 
 When the deployment finishes, it will print a line like this:
 
-```
+```none
 Created remote agent: projects/<PROJECT_NUMBER>/locations/<PROJECT_LOCATION>/reasoningEngines/<AGENT_ENGINE_ID>
 ```
 
@@ -383,7 +380,7 @@ python3 deployment/deploy.py --list
 
 The output will be like:
 
-```
+```none
 All remote agents:
 
 123456789 ("academic_research")
@@ -393,6 +390,7 @@ All remote agents:
 ```
 
 You may interact with the deployed agent using the `test_deployment.py` script
+
 ```bash
 $ export USER_ID=<any string>
 $ python3 deployment/test_deployment.py --resource_id=${AGENT_ENGINE_ID} --user_id=${USER_ID}
@@ -415,10 +413,10 @@ python3 deployment/deploy.py --delete --resource_id=${AGENT_ENGINE_ID}
 
 The Academic Research can be customized to better suit your requirements. For example:
 
- 1. Integrate Specialized Search Tools: Augment the agent's discovery capabilities by incorporating additional academic search functionalities, such as an ArXiv-specific search tool, to complement or replace the default search mechanism, allowing for more targeted retrieval from specialized databases and preprint archives.
- 2. Implement Output Visualization: Enhance the presentation of research findings by adding modules to visualize the network of cited papers or to graphically represent suggested future research topics, thereby offering a more intuitive and interconnected understanding of the academic landscape.
-3. Customize Agent Instructions: Modify the prompts guiding the academic_websearch and academic_newresearch sub-agents. This allows you to direct their analytical focus (e.g., by specifying the depth of citation analysis, emphasizing interdisciplinary connections for future research, or ensuring adherence to particular academic writing conventions) or to refine the structure and detail of their outputs.
+1. Integrate Specialized Search Tools: Augment the agent's discovery capabilities by incorporating additional academic search functionalities, such as an ArXiv-specific search tool, to complement or replace the default search mechanism, allowing for more targeted retrieval from specialized databases and preprint archives.
+2. Implement Output Visualization: Enhance the presentation of research findings by adding modules to visualize the network of cited papers or to graphically represent suggested future research topics, thereby offering a more intuitive and interconnected understanding of the academic landscape.
+3. Customize Agent Instructions: Modify the prompts guiding the academic_web_search and academic_new_research sub-agents. This allows you to direct their analytical focus (e.g., by specifying the depth of citation analysis, emphasizing interdisciplinary connections for future research, or ensuring adherence to particular academic writing conventions) or to refine the structure and detail of their outputs.
 4. Download the seminal paper via DOI or URL:  Augment the agent's capabilities by enabling direct download of seminal papers. This feature would allow the agent to:
-* Resolve DOI to PDF: Given a Digital Object Identifier (DOI), the agent could leverage APIs or web scraping techniques to locate and download the corresponding PDF of the paper. This streamlines the process of accessing primary sources, especially when the DOI is already known.
-* Download from URL: If a direct URL to the paper's PDF or an academic repository page is provided, the agent could be configured to navigate to that URL and initiate the download. This would be particularly useful for papers available on institutional repositories, personal academic websites, or preprint servers that might not have a readily resolvable DOI.
-* Integration with Reference Managers: The downloaded papers could then be automatically imported into a specified reference manager (e.g., Zotero, Mendeley, EndNote), along with their metadata, facilitating seamless organization and citation management for the user's research library. This integration would significantly enhance the efficiency of literature review and research compilation.
+   * Resolve DOI to PDF: Given a Digital Object Identifier (DOI), the agent could leverage APIs or web scraping techniques to locate and download the corresponding PDF of the paper. This streamlines the process of accessing primary sources, especially when the DOI is already known.
+   * Download from URL: If a direct URL to the paper's PDF or an academic repository page is provided, the agent could be configured to navigate to that URL and initiate the download. This would be particularly useful for papers available on institutional repositories, personal academic websites, or preprint servers that might not have a readily resolvable DOI.
+   * Integration with Reference Managers: The downloaded papers could then be automatically imported into a specified reference manager (e.g., Zotero, Mendeley, EndNote), along with their metadata, facilitating seamless organization and citation management for the user's research library. This integration would significantly enhance the efficiency of literature review and research compilation.

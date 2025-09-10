@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Academic_newresearch_agent for finding new research lines"""
+"""Academic_new_research_agent for finding new research lines"""
 
 from google.adk import Agent
 
@@ -20,8 +20,8 @@ from . import prompt
 
 MODEL = "gemini-2.5-pro"
 
-academic_newresearch_agent = Agent(
+academic_new_research_agent = Agent(
     model=MODEL,
-    name="academic_newresearch_agent",
-    instruction=prompt.ACADEMIC_NEWRESEARCH_PROMPT,
+    name="academic_new_research_agent",
+    instruction=prompt.ACADEMIC_NEW_RESEARCH_PROMPT,
 )

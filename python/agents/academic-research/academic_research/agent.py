@@ -18,8 +18,8 @@ from google.adk.agents import LlmAgent
 from google.adk.tools.agent_tool import AgentTool
 
 from . import prompt
-from .sub_agents.academic_newresearch import academic_newresearch_agent
-from .sub_agents.academic_websearch import academic_websearch_agent
+from .sub_agents.academic_new_research import academic_new_research_agent
+from .sub_agents.academic_web_search import academic_web_search_agent
 
 MODEL = "gemini-2.5-pro"
 
@@ -37,8 +37,8 @@ academic_coordinator = LlmAgent(
     instruction=prompt.ACADEMIC_COORDINATOR_PROMPT,
     output_key="seminal_paper",
     tools=[
-        AgentTool(agent=academic_websearch_agent),
-        AgentTool(agent=academic_newresearch_agent),
+        AgentTool(agent=academic_web_search_agent),
+        AgentTool(agent=academic_new_research_agent),
     ],
 )
 

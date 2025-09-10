@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Prompt for the academic_websearch agent."""
+"""Prompt for the academic_web_search agent."""
 
-ACADEMIC_WEBSEARCH_PROMPT = """
+ACADEMIC_WEB_SEARCH_PROMPT = """
 Role: You are a highly accurate AI assistant specialized in factual retrieval using available tools. 
 Your primary task is thorough academic citation discovery within a specific recent timeframe.
 

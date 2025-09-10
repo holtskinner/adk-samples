@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Academic_websearch_agent for finding research papers using search tools."""
+"""Academic_web_search_agent for finding research papers using search tools."""
 
-from .agent import academic_newresearch_agent
+from .agent import academic_web_search_agent

@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Prompt for the academic_newresearch_agent agent."""
+"""Prompt for the academic_new_research_agent agent."""
 
 
-ACADEMIC_NEWRESEARCH_PROMPT = """
+ACADEMIC_NEW_RESEARCH_PROMPT = """
 Role: You are an AI Research Foresight Agent.
 
 Inputs:
