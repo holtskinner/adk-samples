@@ -38,6 +38,7 @@ To learn more, check out the [ADK Documentation](https://google.github.io/adk-do
 │   │   ├── llm-auditor
 │   │   ├── machine-learning-engineering
 │   │   ├── marketing-agency
+│   │   ├── medical-pre-authorization
 │   │   ├── personalized-shopping
 │   │   ├── RAG
 │   │   ├── safety-plugins
