@@ -95,7 +95,7 @@ adk run academic_research
 Or on a web interface:
 
 ```bash
- adk web
+adk web
 ```
 
 The command `adk web` will start a web server on your machine and print the URL.
