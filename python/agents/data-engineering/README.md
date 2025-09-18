@@ -52,7 +52,7 @@ A comprehensive data engineering agent.
     ```bash
     # Clone this repository.
     git clone https://github.com/google/adk-samples.git
-    cd adk-samples/python/agents/data-engineering-agent
+    cd adk-samples/python/agents/data-engineering
 
     # Install the package and dependencies.
     poetry install
@@ -60,7 +60,7 @@ A comprehensive data engineering agent.
 
 3.  **Configuration** 
 
-   Create a `.env` file in the project root directory: `cp env_example
+   Create a `.env` file in the project root directory: `cp .env.example
     .env`
 
    Edit the `.env` file with your configuration:
