@@ -188,6 +188,9 @@ yarn-debug.log
 yarn-error.log
 .pnpm-debug.log
 
+# next.js
+.next/
+
 # Agent Data Files
 python/agents/personalized-shopping/personalized_shopping/shared_libraries/data/
 python/agents/personalized-shopping/personalized_shopping/shared_libraries/search_engine/**
